@@ -19,6 +19,8 @@ pnpm dev
 
 The current design and domain-card data model are prototypes. Public URLs,
 cross-domain search, and automatic rebuild triggers remain open decisions.
+The Pages workflow stays skipped while this repository is private and activates
+after the code license is approved and the repository is made public.
 
 ## Licensing
 
