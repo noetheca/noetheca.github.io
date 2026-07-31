@@ -9,5 +9,16 @@
     "locales": [
       "ja"
     ]
+  },
+  {
+    "id": "aesthetics",
+    "name": "美学",
+    "description": "Internet aestheticsと日本語圏の美学ミームを、出典・帰属・関連からたどるインポートレビュー。",
+    "siteUrl": "https://noetheca.github.io/aesthetics/",
+    "repositoryUrl": "https://github.com/noetheca/aesthetics",
+    "status": "import review",
+    "locales": [
+      "ja"
+    ]
   }
 ]
