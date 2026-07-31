@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#171916" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header">
+      <a class="wordmark" href="/">noetheca</a>
+      <a href="https://github.com/noetheca">GitHub</a>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer>
+      <p>Distributed knowledge, reviewed in the open.</p>
+      <p>Bootstrap draft — licenses and public contribution rules are pending.</p>
+    </footer>
+  </body>
+</html>

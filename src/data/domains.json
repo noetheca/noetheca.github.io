@@ -1,0 +1,13 @@
+[
+  {
+    "id": "mathematics",
+    "name": "数学",
+    "description": "数と構造を、前提関係と関連知識からたどる最初の試作分野。",
+    "siteUrl": "https://noetheca.github.io/mathematics/",
+    "repositoryUrl": "https://github.com/noetheca/mathematics",
+    "status": "prototype",
+    "locales": [
+      "ja"
+    ]
+  }
+]
