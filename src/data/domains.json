@@ -12,7 +12,9 @@
   {
     "id": "aesthetics",
     "name": "美学",
-    "status": "確認中",
+    "siteUrl": "https://noetheca.github.io/aesthetics/",
+    "repositoryUrl": "https://github.com/noetheca/aesthetics",
+    "status": "公開中",
     "locales": [
       "ja"
     ]
