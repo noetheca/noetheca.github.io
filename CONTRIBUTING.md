@@ -1,8 +1,9 @@
 # Contributing
 
-The portal's code license has not yet been approved. External pull requests are
-not currently accepted.
+By submitting a contribution, you retain your copyright and agree to provide
+portal code and project documentation under MPL 2.0. No copyright assignment
+is required. Knowledge prose and diagrams belong in domain repositories under
+CC BY-SA 4.0.
 
-When contributions open, portal code will be provided under the code license
-recorded by this repository. Knowledge prose and diagrams belong in domain
-repositories under their separate content licenses.
+Do not submit third-party material without verified compatible permission and
+complete attribution. AI assistance does not replace those checks.
