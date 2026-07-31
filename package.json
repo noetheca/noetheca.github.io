@@ -1,6 +1,7 @@
 {
   "name": "@noetheca/portal",
   "version": "0.0.0",
+  "license": "MPL-2.0",
   "private": true,
   "description": "Organization portal for the noetheca knowledge base.",
   "type": "module",

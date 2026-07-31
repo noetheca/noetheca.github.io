@@ -20,9 +20,9 @@ pnpm dev
 The current design and domain-card data model are prototypes. Public URLs,
 cross-domain search, and automatic rebuild triggers remain open decisions.
 The Pages workflow stays skipped while this repository is private and activates
-after the code license is approved and the repository is made public.
+after the repository is made public.
 
 ## Licensing
 
-The code license has not yet been approved. No license file is included, and
-external contributions are not currently accepted.
+This repository is licensed under [MPL 2.0](LICENSE). See
+[`LICENSING.md`](LICENSING.md) for details.
