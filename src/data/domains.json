@@ -2,10 +2,9 @@
   {
     "id": "mathematics",
     "name": "数学",
-    "description": "数と構造を、前提関係と関連知識からたどる最初の試作分野。",
     "siteUrl": "https://noetheca.github.io/mathematics/",
     "repositoryUrl": "https://github.com/noetheca/mathematics",
-    "status": "prototype",
+    "status": "公開中",
     "locales": [
       "ja"
     ]
@@ -13,10 +12,7 @@
   {
     "id": "aesthetics",
     "name": "美学",
-    "description": "Internet aestheticsと日本語圏の美学ミームを、出典・帰属・関連からたどるインポートレビュー。",
-    "siteUrl": "https://noetheca.github.io/aesthetics/",
-    "repositoryUrl": "https://github.com/noetheca/aesthetics",
-    "status": "import review",
+    "status": "確認中",
     "locales": [
       "ja"
     ]

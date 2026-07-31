@@ -8,39 +8,12 @@ import domains from "../data/domains.json";
   description="分野ごとの知識を、前提関係と関連性からたどる分散型Knowledge Base。"
 >
   <section class="hero">
-    <p class="eyebrow">Distributed knowledge base</p>
-    <h1>知識を、孤立したページから<br />つながりのある地図へ。</h1>
-    <p class="hero-copy">
-      noethecaは、分野ごとの独立したリポジトリと、言語に依存しない知識グラフを組み合わせる静的Knowledge Baseです。
-      現在は最初の小さな縦切りを検証しています。
-    </p>
+    <h1 class="hero-brand">noetheca</h1>
     <div class="hero-actions">
       <a class="primary-action" href="#domains">分野を見る</a>
       <a href="https://github.com/noetheca/.github/blob/main/docs/PROJECT_BRIEF.md">
         プロジェクト方針
       </a>
-    </div>
-  </section>
-
-  <section class="principles" aria-labelledby="principles-title">
-    <p class="eyebrow">Principles</p>
-    <h2 id="principles-title">小さく、静的に、検証可能に。</h2>
-    <div class="principle-grid">
-      <article>
-        <span>01</span>
-        <h3>安定した知識ID</h3>
-        <p>タイトル、言語、URLが変わっても、関係を保てるIDを使います。</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h3>関係から読む</h3>
-        <p>前提知識と関連知識を明示し、次に読むべき内容を見つけやすくします。</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h3>GitHubで改善</h3>
-        <p>本文、図版、出典、構造をIssueとPull Requestでレビューします。</p>
-      </article>
     </div>
   </section>
 
@@ -50,40 +23,91 @@ import domains from "../data/domains.json";
         <p class="eyebrow">Domains</p>
         <h2 id="domains-title">分野</h2>
       </div>
-      <p>分野ごとに、執筆・移植・レビュー・公開の流れを検証します。</p>
     </div>
 
     <div class="domain-grid">
       {
-        domains.map((domain) => (
+        domains.map((domain, index) => (
           <article class="domain-card">
             <div class="domain-meta">
+              <span>{String(index + 1).padStart(2, "0")}</span>
               <span>{domain.status}</span>
-              <span>{domain.locales.join(" / ")}</span>
+              <span>{domain.locales.map((locale) => locale.toUpperCase()).join(" / ")}</span>
             </div>
             <h3>{domain.name}</h3>
-            <p>{domain.description}</p>
             <div class="domain-actions">
-              <a class="primary-action" href={domain.siteUrl}>Knowledge Base</a>
-              <a href={domain.repositoryUrl}>Repository</a>
+              {
+                "siteUrl" in domain && domain.siteUrl ? (
+                  <a class="primary-action" href={domain.siteUrl}>Knowledge Base</a>
+                ) : (
+                  <span class="availability">公開準備中</span>
+                )
+              }
+              {
+                "repositoryUrl" in domain && domain.repositoryUrl && (
+                  <a href={domain.repositoryUrl}>Repository</a>
+                )
+              }
             </div>
           </article>
         ))
       }
-      <article class="domain-card upcoming">
-        <div class="domain-meta"><span>planned</span></div>
-        <h3>次の分野</h3>
-        <p>共通エンジンとレビュー手順を再利用しながら追加します。</p>
+    </div>
+  </section>
+
+  <section class="purpose" aria-labelledby="purpose-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Purpose</p>
+        <h2 id="purpose-title">目的</h2>
+      </div>
+      <p>
+        分野ごとに独立して執筆・レビューできることと、Organization全体から横断して見つけられることを両立します。
+      </p>
+    </div>
+    <div class="purpose-grid">
+      <article>
+        <span>01</span>
+        <h3>安定した知識ID</h3>
+        <p>タイトル、言語、URLが変わっても、知識の関係を保ちます。</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>静的で検証可能</h3>
+        <p>MarkdownとGitHubを基盤に、変更履歴とレビューを公開します。</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>共通の表示基盤</h3>
+        <p>分野ごとの表現を尊重しながら、操作と品質基準を共有します。</p>
       </article>
     </div>
   </section>
 
-  <section class="status" aria-labelledby="status-title">
-    <p class="eyebrow">Project status</p>
-    <h2 id="status-title">まだ、完成形ではありません。</h2>
-    <p>
-      UI、URL、検索、解説形式はレビューを通じて決めます。
-      現在のページとコンテンツは、判断材料を得るためのprototypeです。
-    </p>
+  <section class="contribute" aria-labelledby="contribute-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Contribute</p>
+        <h2 id="contribute-title">Contribute</h2>
+      </div>
+      <p>本文と出典は各分野へ、表示や仕組みの改善は共通基盤へ提案できます。</p>
+    </div>
+    <div class="contribution-grid">
+      <article>
+        <p class="eyebrow">Domain content</p>
+        <h3>知識・文脈を改善する</h3>
+        <p>数学や美学の本文、関係、出典に関する提案は、各分野のRepositoryから送れます。</p>
+        <a href="#domains">分野を選ぶ</a>
+      </article>
+      <article>
+        <p class="eyebrow">Shared engine &amp; portal</p>
+        <h3>共通の体験を改善する</h3>
+        <p>表示エンジン、アクセシビリティ、検証、ポータルに関する提案を受け付けています。</p>
+        <div class="inline-links">
+          <a href="https://github.com/noetheca/knowledge-engine">Knowledge engine</a>
+          <a href="https://github.com/noetheca/noetheca.github.io">Portal</a>
+        </div>
+      </article>
+    </div>
   </section>
 </BaseLayout>
